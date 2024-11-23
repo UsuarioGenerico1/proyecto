@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="css/general.css"> 
     <title>Document</title>
     <style>
-   
+    .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté en frente de todo */
+    }
+
+    /* Contenedor del modal */
+    .contenedor {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        width: 400px;
+        max-width: 90%;
+        text-align: center;
+        z-index: 1001; /* Mayor que el overlay */
+    }
+
+    /* Botón de cierre */
+    .btn-cerrar {
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn-cerrar:hover {
+        background-color: #d32f2f;
+    }
+    
     .banner_info{
         background-color: #555555;
         display: block;
@@ -16,15 +55,24 @@
         margin-top: 1%;
         margin-bottom: 5%;
     }
-    .btn{
-        padding: 10px;
-        border: none;
-        max-width: 100%;
-    }
-    .btn img{
+    .slider_contenedor {
         width: 100%;
-        height: auto;
+        max-width: 900px;
+        margin: 0 auto;
+        overflow: hidden;
     }
+    .slider {
+        display: flex;
+        transition: transform 1s ease;
+    }
+   .slider .imgBanner{
+        width: 100%;
+        max-width: 900px;
+        height: 500px;
+        object-fit: cover;
+   }
+    
+    
     .pasos{
         display: flex;
         flex-direction: column;
@@ -58,8 +106,16 @@
     .itemB{
         display: inline;
         align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
 
+    .itemB:hover {
+    background-color: #e0e0e0; /* Cambia el color de fondo */
+    border-color: #999; /* Cambia el color del borde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    }
 
     .preguntasFrecuentes{
         margin-top: 5%;
@@ -154,10 +210,13 @@
     <section id="banner_info" class="banner_info">
         <h1 style="color: white; padding:15px;"> COMO FUNCIONA </h1>
         <p style="color: white;font-size: 25px;"> estos son los pasos para encontrar al profecional que buscas</p>
-        
-        <button class="btn" style="border-radius: 4px; color: #13544e;"> 
-            <img class="img"  alt="imagen de publicidad" src="https://vilmanunez.com/wp-content/uploads/2020/02/Imagen-destacada-post-VN-1.png">
-        </button>
+        <div class="slider_contenedor">
+            <div class="slider" style="border-radius: 4px; color: #13544e;"> 
+                <img class="imgBanner"  alt="imagen de publicidad" src="https://vilmanunez.com/wp-content/uploads/2020/02/Imagen-destacada-post-VN-1.png">
+                <img class="imgBanner"  alt="imagen de publicidad" src="https://aarp.widen.net/content/uegeclx2cc/jpeg/103037-High-Pay-Jobs.jpg?crop=true&anchor=0,0&q=80&color=ffffffff&u=ovnylx&w=1140&h=655">
+                <img class="imgBanner"  alt="imagen de publicidad" src="https://www.eltelegrafo.com.ec/media/k2/items/cache/2dad8e424e310270867eb180af700189_XL.jpg">  
+            </div>
+        </div>
     </section>
    
        
@@ -197,18 +256,21 @@
     <div class="banner_beneficios">
         <h2>Con la confianza de miles de clientes</h2>
         
-        <div class="itemB">
+        <div class="itemB" onclick="ventanaModal('Fecha establecidas',
+        'para garantizar la confiabilidad las oferta tienen fechas establecidas')">
             <img alt="calendario" 
             src="https://cdn-icons-png.flaticon.com/128/747/747310.png"
             width="100" height="100"
             >
             <p>Los plazos y precios estan preestablecidos</p>
         </div>
-        <div class="itemB">
+        <div class="itemB" onclick="ventanaModal('Pagos Seguros',
+         'nuestros pagos estan respladados para garantizar la segurdad de su dinero')">
             <img alt="billetera" src="https://cdn-icons-png.flaticon.com/128/482/482541.png" width="100" height="100">
             <p>Los pagos están protegidos hasta su aprobación personal de entrega.</p>
         </div>
-        <div class="itemB">
+        <div class="itemB" onclick="ventanaModal('Atencion al cliente',
+         'nuestros servicio de atencion al cliente esta disponible siempre para que no dudes en consultar tus dudas')">
             <img alt="servicios"
             src="https://cdn-icons-png.flaticon.com/128/8382/8382909.png" width="100" height="100">
             <p>El servicio de atención al cliente siempre está disponible para responder sus preguntas</p>
@@ -252,5 +314,7 @@
     </address>
     <p>© 2024 </p>
 </footer>
+
+<script src="js/como_funciona.js"></script>
 </body>
 </html>
