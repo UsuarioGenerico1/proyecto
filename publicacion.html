@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/general.css">
     <title>Document</title>
     <style>
-        
+        body{
+            background-color: #F9F9F9;
+        }
         #formulario {
             background-color: #fff;
             border: 1px solid #000;
@@ -14,7 +16,8 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             width: 400px;
-            margin-top: 2%;
+            margin-top: 5%;
+            margin-bottom: 10%;
             margin-left: 35%;
         }
 
@@ -28,6 +31,10 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
+        }
+        .descripcion textarea{
+            height: 300px;
+            resize: none;
         }
 
         #formulario input[type="text"],
@@ -70,6 +77,20 @@
             background-color: #c82333;
         }
 
+        footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        }
+
+        footer a {
+        color: #fff;
+        text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -109,9 +130,9 @@
                     <label for="titulo">Titulo de publicacion</label>  
                 <input id="titulo" type="text" name="titulo">
                 </div>
-                <div>
-                    <label for="descripción">Descripción de trabajo </label>
-                    <textarea id="descripción" placeholder="Descripción" name="descripción"></textarea>
+                <div class="descripcion">
+                    <label for="descripcion">Descripción de trabajo </label>
+                    <textarea id="descripcion" placeholder="Descripción" name="descripción"></textarea>
                 </div>
                 
                 
@@ -133,18 +154,27 @@
                     <label for="oferta">oferta</label>   
                     <label><input type="radio" name="oferta" value="si"> SI</label>
                     <label><input type="radio" name="oferta" value="no"> NO</label>
+                    <span class="errorOferta"></span>
                 </div>
                 <div class="fecha">
                     <label for="fecha">fecha de terminacion de oferta</label>
                     <input class="fecha" type="date" id="fecha" name="fecha">
                 </div>
                 <div>
-                    <button class="btn" type="submit">publicar</button>
-                    <button class="btn" type="reset">Cancelar</button>
+                    <button class="btn" id="guardar" type="submit">publicar</button>
+                    <button class="btn" id="cancelar" type="reset">Cancelar</button>
                 </div>
             </div>
         </form>
-    
-<script type="text/javascript" src="js/como_funciona.js"></script>
+        <footer>
+            <p>OficiosYA</p>
+            <address>
+                <a href="correo@ejemplo.com">correo@ejemplo.com</a>
+                <br>
+                <a href="tel:+14155550132">+1 (415) 555‑0132 </a>
+            </address>
+            <p>© 2024 </p>
+        </footer>   
+<script type="text/javascript" src="js/publicacion.js"></script>
 </body>
 </html>
