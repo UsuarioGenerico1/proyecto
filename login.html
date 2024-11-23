@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Edison Veloz Moran">
+    <title>Inicio de Sesión - OficioYA</title>
+    <link rel="stylesheet" href="css/general2.css">
+</head>
+<body>
+    <header id="cabezera">
+        <a href="home.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>  
+        </ul>
+    </nav>
+
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tipoAcceso">Tipo de Acceso:</label>
+                    <select id="tipoAcceso" name="tipoAcceso">
+                        <option value="">Seleccione una opción</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="profesional">Profesional</option>
+                    </select>
+                    <span class="error-message" id="tipoAccesoError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Notificaciones:</label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="notifEmail" name="notificaciones" value="email">
+                        <label for="notifEmail">Email</label>
+                        <input type="radio" id="notifSMS" name="notificaciones" value="sms">
+                        <label for="notifSMS">SMS</label>
+                    </div>
+                    <span class="error-message" id="notificacionesError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="preguntaSeguridad">Pregunta de Seguridad: ¿Nombre de tu primera mascota?</label>
+                    <input type="text" id="preguntaSeguridad" name="preguntaSeguridad">
+                    <span class="error-message" id="preguntaSeguridadError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="recordarme" name="recordarme">
+                    <label for="recordarme">Recordarme</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Iniciar Sesión</button>
+            </form>
+
+            <p class="auth-link">¿No tienes una cuenta? <a href="registro.html">Regístrate aquí</a></p>
+        </div>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

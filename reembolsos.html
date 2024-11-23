@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Geovanny Andrés Solis Caballero">
+    <title>Reembolso - OficioYA</title>
+    <link rel="stylesheet" href="css/general.css">
+<style> 
+    .container{
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    label{
+        margin-bottom: 5px;
+    }
+
+    input[type=text], input[type=date], input[type=number], input[type=email], input[type=tel]{
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+
+    fieldset{
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    legend{
+        font-weight: bold;
+    }
+
+    #boton_env{
+        padding: 10px;
+        background-color: #016101;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #boton_env:hover{
+        background-color: #209603;
+        transition: background-color 0.3s;
+    }
+
+    nav{
+        padding-bottom: 10PX;
+    }
+
+</style>
+</head>
+<body>
+    <header id="cabezera">
+        <a href="home.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        <div id="busqueda">
+            <input type="text" placeholder="Buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li> 
+        </ul>
+    </nav>
+    <div class="antesdeform">
+        <p style="text-align: center; font-size: x-large; margin: 20px;">Nuestras políticas nos obliga a dar reembolsos a todos
+            nuestros clientes los cuales lo soliciten. Rellena este formulario.
+        </p>
+    </div>
+
+    <div class="container">
+        <h1>Formulario de Reembolso</h1>
+            <form action="#" method="post" onsubmit="return validarwForm()">
+                <label for="fecha-orden">Fecha de Orden:</label>
+                <input type="date" id="fecha-orden" name="fecha-orden" required>
+    
+                <label for="id-orden">Id de Orden:</label>
+                <input type="text" id="id-orden" name="id-orden" required>
+    
+                <label for="cantidad-pagada">Cantidad Pagada:</label>
+                <input type="number" id="cantidad-pagada" name="cantidad-pagada" step="0.01" required>
+    
+                <label for="fecha-pago">Fecha de Pago:</label>
+                <input type="date" id="fecha-pago" name="fecha-pago" required>
+    
+                <fieldset>
+                    <legend>Tipo de Pago:</legend>
+                    <label>
+                        <input type="radio" name="tipo-pago" value="full" required> Full
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo-pago" value="partial"> Partial
+                    </label>
+                </fieldset>
+    
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+    
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular">
+    
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo">
+
+                <label for="razon">Razón del reembolso (opcional):</label>
+                <input type="text" id="razon" name="razon">
+    
+                <button type="submit" id="boton_env">Enviar</button>
+            </form>
+        </div>
+
+        <script src="js/validaciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Geovanny Andrés Solis Caballero">
+    <title>Ayuda - OficioYa</title>
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        #titulo-preguntas{
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #sub-titulos{
+            font-size: x-large;
+            color: #f9f9f9;
+        }
+
+        #boton-contacto{
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+        }
+
+        #icono-llamada{
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+        }
+
+        #boton-contacto:hover {
+            background-color: rgb(30, 212, 30);
+        }
+
+        body{
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 20px;
+            background-color: #444;
+            margin: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+        flex: 1;
+        }
+
+        a:-webkit-any-link{
+            color: #f9f9f9;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        a:hover{
+            background-color: darkgray;
+        }
+    
+        .container{
+        max-width: 1200px;
+        margin: auto;
+        background: #f9f9f9;
+        /*border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+        }   
+
+        article.preguntas{
+            padding: 10px;
+            
+        }
+        
+        article ul li{
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        article ul li p{
+            font-size: large;
+            font-weight: normal;
+        }
+
+        .footer {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .container-footer{
+            display: flex;
+            padding: 20px;
+            margin: 0;
+            color: #f9f9f9;
+        }    
+
+        .lista1, .lista2, .lista3, .lista4, .lista5{
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .lista1:hover, .lista2:hover, .lista3:hover, .lista4:hover, .lista5:hover {
+            background-color: rgba(240, 240, 240, 0.808);
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<header id="cabezera">
+    <a href="home.html" style="text-decoration: none;color: white;" class="home">
+        <p>OficioYA</p>
+    </a>
+    <div id="busqueda">
+        <input type="text" placeholder="Buscar....">
+        <button type="button">🔍</button>
+    </div>
+    <div id="iconos">
+        <a href="login.html">
+            <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+        </a>
+        <a href="ayuda.html">
+            <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+        </a>            
+    </div>
+</header>
+<nav class="enlaces">
+    <ul>
+        <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li> 
+    </ul>
+</nav>
+    <div>
+        <h1 style="text-align: center; font-size:xx-large; margin-bottom: 1px;">¡Hola! Estamos aquí para ayudarte</h1>
+    </div>
+
+    <div class="container">
+            <article class="preguntas"> <h2 id="titulo-preguntas">Preguntas Frecuentes</h2>
+                <ul style="list-style-type:none; padding: 15px;">
+                    <div class="lista1">
+                        <li>¿Puedo usar la plataforma sin registrarme?
+                            <p>Claro que sí, la página es de acceso gratis siempre y cuando solo estés viendo, hey, recomiéndanos.</p>
+                        </li>
+                    </div>
+
+                    <div class="lista2">
+                        <li>¿Qué debo considerar antes de elegir un profesional?
+                            <p>Antes de seleccionar un profesional, revisa su perfil, experiencia, calificaciones y comentarios de otros clientes. Esto te dará una idea de la calidad de su trabajo y su nivel de profesionalismo.</p>
+                        </li>
+                    </div>
+
+                    <div class="lista3">
+                        <li>¿Puedo contratar más de un profesional a la vez?
+                            <p>Sí, puedes contratar más de un profesional si tienes múltiples necesidades o proyectos que requieren diferentes especialidades. Esto queda totalmente a tu criterio, y puedes gestionar varias solicitudes de servicio simultáneamente desde tu cuenta.</p>
+                        </li>
+                    </div>
+
+                    <div class="lista4">
+                        <li>¿El pago es seguro en esta plataforma?
+                            <p>Sí, el pago es completamente seguro en nuestra plataforma. Utilizamos sistemas de seguridad y encriptación avanzados para proteger tu información y asegurar que todos los pagos se realicen de forma segura.</p>
+                        </li>
+                    </div>
+
+                    <div class="lista5">
+                        <li>¿La plataforma ofrece alguna garantía sobre los servicios?
+                            <p>Sí, nuestra plataforma ofrece una garantía de calidad en los servicios. Si experimentas algún problema con el servicio brindado, nuestro equipo de atención al cliente está disponible para ayudarte y garantizar que recibas el soporte necesario.</p>
+                        </li>
+                    </div>
+                </ul>
+        </article>
+    </div>
+    <footer class="footer">
+        <section class="container-footer">
+            <article><h2 class="sub-titulos">¿No hallaste lo que buscabas?</h2>
+                <button id="boton-contacto">
+                    <img src="img/llamada.png" alt="Llamada" id="icono-llamada"> Contáctanos
+                </button>
+                <br>
+                2024. TODOS LOS DERECHOS RESERVADOS
+            </article>
+        </section>
+    </footer>
+
+    <script src="js/evento.js"></script>
+</body>
+</html>

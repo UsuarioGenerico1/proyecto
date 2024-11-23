@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Edison Wladimir Veloz Moran">
+    <title>Perfil Profesional - OficioYa</title>
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        
+    #profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    .profile-info {
+        display: flex;
+        padding: 80px;
+        background-color: #f9f9f9;
+        gap: 20px;
+        align-items: center;
+        width: -100%;
+    }
+
+    .profile-photo {
+        width: 150px;
+        border-radius: 8px;
+    }
+
+    .profile-details {
+        flex: 1;
+    }
+
+    .action-buttons {
+        margin-top: 10px;
+        
+    }
+
+    .action-buttons button {
+        margin: 5px;
+        padding: 10px 15px;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    #about, #reviews {
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+    }
+
+    .review {
+        display: flex;
+        align-items: flex-start;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .review-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+
+    .review-content {
+        flex: 1;
+    }
+
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .review-user {
+        font-weight: bold;
+    }
+
+    .review-rating {
+        color: #66635a; 
+        /*Color para las estreyas*/
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    @media (max-width: 600px) {
+        .profile-info {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo {
+            width: 150px; 
+        }
+
+        .action-buttons button {
+            width: 100%; 
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <header id="cabezera">
+        <a href="home.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>  
+        </ul>
+    </nav>
+
+<section id="profile-container">
+    <section id="perfil">
+        <div class="profile-info">
+            <img src="https://img.freepik.com/vector-premium/ilustracion-vectorial-plana-personaje-programador-computadora_1033579-83105.jpg" alt="Foto de perfil" class="profile-photo">
+            <div class="profile-details">
+                <h2>Edison Wladimir Veloz Moran</h2>
+                <p><strong>Cargo:</strong> Desarrollador Web</p>
+                <p><strong>Conocimientos:</strong> HTML, CSS</p>
+                <p><strong>Localidad:</strong> Guayaquill, Ecuador</p>
+                <p><strong>Edad:</strong> 26 años </p>
+                <div class="action-buttons">
+                    <button>Contratar</button>
+                    <button>Guardar en Lista</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h3>Sobre mí</h3>
+        <p>Soy Edison, vivo en la ciudad de guayaquil desde que tengo uso de razón en esta misma ciudad conoci a una persona maravillosa la cual llego a ser una parte fundamental en mi vida y con la que forme un hermoso hogar su nombre es Estefania la madre de mis hijos. Sergio mi hijo mayor tiene 6 años actualmente estudia y su deporte favorito es el ciclismo, Domenica mi hija va a cumplir sus 2 añitos unos dias antes de mi cumpleaños por cosas de la vida casi coincidimos en fechas es una niña muy inteligente por el momento aun no estudia pero le apasiona el dibujo y la pinturas. En lo que soy yo me gusta mucho el fútbol, lo juge profesionalmente hace muchos años atrás en un equipo de segunda categoria del guayas pero por razones personales y medicas no pude continuarlo. Actualmente estudio la carrera de Software que es algo que siempre me llamo la atención el desarrollo de nuevas tecnologias de la ciencia e información.</p>
+    </section>
+
+    <section id="reviews">
+        <h3>Reseñas de Usuarios</h3>
+        <div class="review">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png" alt="Foto usuario" class="review-photo">
+            <div class="review-content">
+                <div class="review-header">
+                    <span class="review-user">Pepe Aguilar</span>
+                    <span class="review-rating">★★★★☆</span>
+                </div>
+                <p>Excelente profesional, muy recomendado.</p>
+            </div>
+        </div>
+        <div class="review">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png" alt="Foto usuario" class="review-photo">
+            <div class="review-content">
+                <div class="review-header">
+                    <span class="review-user">Juan Martinez</span>
+                    <span class="review-rating">★★★★★</span>
+                </div>
+                <p>Gran experiencia de trabajo.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<footer>
+    <p> OficioYa - Tarea.</p>
+</footer>
+
+</body>
+</html>

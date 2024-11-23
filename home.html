@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Helen Reyes Vera">
+    <title>Plataforma de Servicios de Oficios Locales</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+    .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+    .gallery-item img:hover {
+    transform: scale(1.1);
+}
+  /* Nuevo selector de agrupación para los títulos h2, h3, y h4 */
+        h2, h3, h4 {
+            color: #6A1B9A;
+            font-weight: bold;
+        }
+
+        /* Nuevo selector de agrupación para enlaces en el pie de página */
+        footer a {
+            color: #6A1B9A;  /* Color morado oscuro */
+            text-decoration: none;
+            font-weight: bold;  /* Enlaces en negrita */        }
+          /* Selector Universal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    </style>
+ <header id="cabezera">
+        <a href="home.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>       
+        </ul>
+    </nav>
+
+</head>
+<body style="font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333;">
+
+<header style="background-color: #333; color: #fff; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center;">
+   
+   
+</header>
+
+<section class="hero" style="background-color: #4CAF50; color: #fff; padding: 60px 20px; text-align: center;">
+    <h2 style="font-size: 36px; margin-bottom: 10px;">Encuentra Profesionales de Oficios Locales en tu Área</h2>
+    <p class="highlight" style="color: #4CAF50; font-weight: bold;">Conectando a personas con profesionales de confianza para cada necesidad</p>
+    <div class="search-bar" style="display: flex; justify-content: center; margin-top: 20px;">
+        <input type="text" placeholder="¿Qué servicio necesitas?" style="padding: 10px; width: 300px; border: none; border-radius: 5px 0 0 5px; outline: none;">
+        <button style="padding: 10px 20px; background-color: #333; color: #fff; border: none; border-radius: 0 5px 5px 0; cursor: pointer; font-weight: 600;">Buscar</button>
+    </div>
+</section>
+
+<section class="categories" style="display: flex; justify-content: center; flex-wrap: wrap; padding: 20px 0;">
+    <h2 style="width: 100%; text-align: center; margin-bottom: 20px;">Categorías de Servicios</h2>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Gasfiteros</h3>
+        <p style="font-size: 16px;">Encuentra expertos en fontanería</p>
+    </article>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Electricistas</h3>
+        <p style="font-size: 16px;">Profesionales en electricidad</p>
+    </article>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Jardineros</h3>
+        <p style="font-size: 16px;">Cuidado de jardines y áreas verdes</p>
+    </article>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Limpieza</h3>
+        <p style="font-size: 16px;">Servicios de limpieza profesional</p>
+    </article>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Técnico de PC</h3>
+        <p style="font-size: 16px;">Servicios técnicos profesionales</p>
+    </article>
+    <article class="category-card" style="background-color: #fff; width: 180px; margin: 10px; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+        <h3 style="font-size: 20px; margin-bottom: 10px;">Chófer</h3>
+        <p style="font-size: 16px;">Servicios profesionales de transporte</p>
+    </article>
+</section>
+<section id="gallery" class="gallery" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; padding: 20px;">
+    <h2 style="text-align: center; margin-bottom: 20px;">Galería de Profesionales</h2>
+
+    <!-- Primer Profesional -->
+    <div class="gallery-item" style="display: flex; flex-direction: column; align-items: center; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="imagenes/img1.jpg" alt="Gasfitero" style="width: 100%; height: auto; transition: transform 0.3s ease; margin-bottom: 10px;">
+        <div class="button-container" style="text-align: center; margin-top: 10px;">
+            <a href="pago.html?servicio=gasfitero&banco=guayaquil&cuenta=123-456-7890">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Contratar</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Segundo Profesional -->
+    <div class="gallery-item" style="display: flex; flex-direction: column; align-items: center; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="imagenes/img2.jpg" alt="Electricista" style="width: 100%; height: auto; transition: transform 0.3s ease; margin-bottom: 10px;">
+        <div class="button-container" style="text-align: center; margin-top: 10px;">
+            <a href="pago.html?servicio=electricista&banco=pichincha&cuenta=234-567-8901">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Contratar</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tercer Profesional -->
+    <div class="gallery-item" style="display: flex; flex-direction: column; align-items: center; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="imagenes/img5.jpg" alt="Técnico de PC" style="width: 100%; height: auto; transition: transform 0.3s ease; margin-bottom: 10px;">
+        <div class="button-container" style="text-align: center; margin-top: 10px;">
+            <a href="pago.html?servicio=tecnico-pc&banco=bolivariano&cuenta=345-678-9012">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Contratar</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Cuarto Profesional -->
+    <div class="gallery-item" style="display: flex; flex-direction: column; align-items: center; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="imagenes/img6.jpg" alt="Chofer" style="width: 100%; height: auto; transition: transform 0.3s ease; margin-bottom: 10px;">
+        <div class="button-container" style="text-align: center; margin-top: 10px;">
+            <a href="pago.html?servicio=chofer&banco=guayaquil&cuenta=456-789-0123">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Contratar</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Quinto Profesional -->
+    <div class="gallery-item" style="display: flex; flex-direction: column; align-items: center; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        <img src="imagenes/img4.jpg" alt="Personal de limpieza" style="width: 100%; height: auto; transition: transform 0.3s ease; margin-bottom: 10px;">
+        <div class="button-container" style="text-align: center; margin-top: 10px;">
+            <a href="pago.html?servicio=limpieza&banco=pichincha&cuenta=567-890-1234">
+                <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Contratar</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="info" style="padding: 40px 20px; background-color: #f1f1f1; color: #333;">
+    <h2 style="text-align: center; font-size: 28px; font-weight: 600; margin-bottom: 20px;">¿Por Qué Elegir Nuestros Servicios?</h2>
+    <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.6; text-align: center;">
+        En <strong>Oficios Locales</strong>, conectamos a personas como tú con profesionales capacitados y de confianza, listos para satisfacer cualquier necesidad en tu hogar o negocio. Desde reparaciones rápidas hasta mantenimiento especializado, nuestros expertos en diferentes áreas garantizan un trabajo de calidad y una experiencia segura.
+    </p>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+        <article style="background-color: #fff; width: 200px; margin: 15px; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 20px; font-weight: 600;">Profesionales Verificados</h3>
+            <p style="font-size: 14px;">Cada profesional ha sido verificado y cuenta con las credenciales necesarias.</p>
+        </article>
+        <article style="background-color: #fff; width: 200px; margin: 15px; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 20px; font-weight: 600;">Cobertura Local</h3>
+            <p style="font-size: 14px;">Encuentra expertos en tu zona, listos para atenderte sin demoras.</p>
+        </article>
+        <article style="background-color: #fff; width: 200px; margin: 15px; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 20px; font-weight: 600;">Calificaciones Transparentes</h3>
+            <p style="font-size: 14px;">Revisa las calificaciones de otros clientes y elige al profesional ideal.</p>
+        </article>
+        <article style="background-color: #fff; width: 200px; margin: 15px; padding: 20px; text-align: center; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h3 style="font-size: 20px; font-weight: 600;">Servicio Personalizado</h3>
+            <p style="font-size: 14px;">Adaptamos los servicios a tus necesidades, con atención rápida y amigable.</p>
+        </article>
+    </div>
+</section>
+
+<aside style="padding: 20px; text-align: center;">
+    <p>¿Necesitas ayuda? <a href="#" style="color: #4CAF50;">Contáctanos aquí</a></p>
+</aside>
+
+<footer style="background-color: #333; color: #fff; padding: 40px 20px; display: flex; justify-content: space-around; flex-wrap: wrap; text-align: center;">
+    <div>
+        <h4 style="font-weight: 600; margin-bottom: 15px;">Oficios Locales</h4>
+        <p>Conectamos a personas con profesionales locales de confianza. <br> Encuentra el servicio que necesitas, cuando lo necesitas.</p>
+    </div>
+    <div>
+        <h4 style="font-weight: 600; margin-bottom: 15px;">Enlaces Rápidos</h4>
+        <a href="index.html" style="color: #fff; text-decoration: none;">Inicio</a><br>
+        <a href="registro.html" style="color: #fff; text-decoration: none;">Registrar Servicio</a><br>
+        <a href="busqueda.html" style="color: #fff; text-decoration: none;">Buscar Profesionales</a><br>
+        <a href="calificaciones.html" style="color: #fff; text-decoration: none;">Calificaciones</a>
+    </div>
+    <div>
+        <h4 style="font-weight: 600; margin-bottom: 15px;">Redes Sociales</h4>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="social-icons" style="display: flex; justify-content: center; margin-top: 10px;">
+            <a href="#" target="_blank" style="color: #fff; margin: 0 10px; font-size: 20px;">Facebook</a>
+            <a href="#" target="_blank" style="color: #fff; margin: 0 10px; font-size: 20px;">Twitter</a>
+            <a href="#" target="_blank" style="color: #fff; margin: 0 10px; font-size: 20px;">Instagram</a>
+        </div>
+    </div>
+    <div>
+        <p>&copy; 2024 Oficios Locales - Todos los derechos reservados</p>
+    </div>
+</footer>
+
+</body>
+</html>

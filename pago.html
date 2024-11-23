@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Helen Reyes Vera">
+    <title>Completa tu Pago - Oficios Locales</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header p {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+        }
+
+        .hero p {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .payment-option {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .payment-option img {
+            width: 100px;
+            margin: 10px 0;
+        }
+
+        .payment-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .payment-form label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .payment-form input {
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .payment-form button {
+            padding: 10px 20px;
+            background-color: #6A1B9A;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+ <header id="cabezera">
+        <a href="home.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="indez.html">Busqueda</a></li>
+            <li><a href="prueba5.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="ayuda.html">Ayuda</a></li>  
+        </ul>
+    </nav>
+
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <h2>Completa tu Pago</h2>
+        <p>Finaliza tu pago y obtén el servicio que necesitas</p>
+    </section>
+
+    <!-- Contenedor de Pagos -->
+  <div class="container">
+    <h3 class="section-title">Monto a Cancelar</h3>
+    <!-- Campo editable para monto, de tipo texto para permitir el signo de dolar -->
+    <input type="text" id="monto-cancelar" placeholder="Escribe el monto" style="font-size: 24px; text-align: center; width: 100%; padding: 10px;" />
+</div>
+
+<script>
+    const inputMonto = document.getElementById('monto-cancelar');
+
+    // Función para agregar el signo de dólar y permitir al usuario escribir el monto
+    inputMonto.addEventListener('input', function() {
+        let valor = inputMonto.value;
+
+        // Si ya tiene el signo de dólar, lo eliminamos antes de manipular el valor
+        valor = valor.replace('$', '');  // Eliminamos el signo de dólar si existe
+
+        // Reemplazamos cualquier valor no numérico por una cadena vacía, excepto el punto decimal
+        valor = valor.replace(/[^0-9.]/g, '');
+
+        // Si no está vacío, agregamos el signo de dólar al principio
+        if (valor) {
+            inputMonto.value = `$${valor}`;
+        }
+    });
+</script>
+
+        <h3 class="section-title">Opciones de Pago</h3>
+
+        <!-- Opciones de pago -->
+        <div class="payment-options">
+            <div class="payment-option" onclick="showPaymentForm('transferencia')">
+                <img src="imagenes/bancos.png" alt="Banco Guayaquil">
+                <p><strong>Transferencias Bancarias</strong></p>
+
+            </div>
+	
+            <div class="payment-option" onclick="showPaymentForm('tarjeta')">
+                <img src="imagenes/tarjeta.png" alt="Tarjeta de Crédito">
+                <p><strong>Tarjeta</strong></p>
+            </div>
+            <div class="payment-option" onclick="showPaymentForm('paypal')">
+                <img src="imagenes/paypal.png" alt="PayPal">
+                <p><strong>PayPal</strong></p>
+            </div>
+        </div>
+
+        <!-- Formulario de Pago por Transferencia -->
+        <div class="payment-form" id="transferencia-form">
+            <h3>Datos para Transferencia Bancaria</h3>
+	    <img src="imagenes/banco-guayaquil.png" alt="Banco Guayaquil">
+            <p><strong>Banco Guayaquil</strong></p>
+            <p><strong>Cuenta Corriente:</strong> 123-456-7890</p>
+            <p><strong>Nombre del Profesional:</strong> Juan Pérez</p>
+            <p><strong>Cédula:</strong> 1234567890</p>
+             <a href="https://bancavirtual.bancoguayaquil.com/BMultiPersonas/indexAlternativoP.html" target="_blank">
+        <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Realizar Transferencia</button>
+    </a>
+             <h3>Datos para Transferencia Bancaria</h3>
+            <img src="imagenes/banco pichincha.png" alt="Banco Pichincha">
+
+            <p><strong>Banco Pichincha</strong></p>
+            <p><strong>Cuenta Ahorro:</strong> 333-456-7890</p>
+            <p><strong>Nombre del Profesional:</strong> Juan Pérez</p>
+            <p><strong>Cédula:</strong> 1234567890</p>
+            
+ <a href="https://bancaweb.pichincha.com/pichincha
+" target="_blank">
+        <button style="padding: 10px 20px; background-color: #4CAF50; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Realizar Transferencia</button>
+    </a>
+
+
+        </div>
+
+        <!-- Formulario de Pago por Tarjeta -->
+        <div class="payment-form" id="tarjeta-form">
+            <h3>Pago con Tarjeta de Crédito</h3>
+            <label for="card-number">Número de tarjeta</label>
+            <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+            <label for="expiry-date">Fecha de expiración</label>
+            <input type="text" id="expiry-date" placeholder="MM/AA">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="XXX">
+            <button>Realizar Pago</button>
+        </div>
+
+        <!-- Formulario de Pago por PayPal -->
+        <div class="payment-form" id="paypal-form">
+            <h3>Pago con PayPal</h3>
+            <button>Realizar Pago con PayPal</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h4>Oficios Locales</h4>
+            <p>Conectamos a personas con profesionales locales de confianza.</p>
+        </div>
+        <div>
+            <h4>Enlaces Rápidos</h4>
+            <a href="index.html">Inicio</a><br>
+            <a href="registro.html">Registrar Servicio</a><br>
+            <a href="busqueda.html">Buscar Profesionales</a><br>
+            <a href="calificaciones.html">Calificaciones</a>
+        </div>
+        <div>
+            <h4>Redes Sociales</h4>
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div>
+            <p>&copy; 2024 Oficios Locales - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Script para mostrar formularios -->
+    <script>
+        function showPaymentForm(paymentType) {
+            // Ocultar todos los formularios
+            document.getElementById('transferencia-form').style.display = 'none';
+            document.getElementById('tarjeta-form').style.display = 'none';
+            document.getElementById('paypal-form').style.display = 'none';
+
+            // Mostrar el formulario correspondiente
+            if (paymentType === 'transferencia') {
+                document.getElementById('transferencia-form').style.display = 'block';
+            } else if (paymentType === 'tarjeta') {
+                document.getElementById('tarjeta-form').style.display = 'block';
+            } else if (paymentType === 'paypal') {
+                document.getElementById('paypal-form').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
