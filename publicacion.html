@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/general.css">
+    <title>Document</title>
+    <style>
+        
+        #formulario {
+            background-color: #fff;
+            border: 1px solid #000;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            margin-top: 2%;
+            margin-left: 35%;
+        }
+
+        #formulario h1 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #formulario label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #formulario input[type="text"],
+        #formulario textarea,
+        #formulario select,
+        #formulario input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #000;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #formulario .oferta label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        #formulario .btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+
+        #formulario .btn:hover {
+            background-color: #218838;
+        }
+
+        #formulario .btn[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        #formulario .btn[type="reset"]:hover {
+            background-color: #c82333;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="cabezera">
+        <a href="busquedas.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registro-profesionales.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="publicacion.html">Publicar</a></li>
+            <li><a href="perfil_pro.html">ver profesional</a></li> 
+            <li><a href="ayuda.html">Ayuda</a></li>       
+        </ul>
+    </nav>
+        <form action="" id="formulario" onsubmit="return validarFormulario()">
+            <div class="form">
+                <h1>Crear una Publicacion  </h1>
+                <div class="titulo">
+                    <label for="titulo">Titulo de publicacion</label>  
+                <input id="titulo" type="text" name="titulo">
+                </div>
+                <div>
+                    <label for="descripción">Descripción de trabajo </label>
+                    <textarea id="descripción" placeholder="Descripción" name="descripción"></textarea>
+                </div>
+                
+                
+                <div class="precio">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" placeholder="$">
+                </div>
+                <div class="oficio">
+                    <label>seleccione tipo de oficio</label>
+                    <select name="tipo_oficio" id="tipo_oficio" class="estados">
+                        <option value="">Seleccione....</option>
+                        <option value="gafitero">Gafitero</option>
+                        <option value="electricista">Electricista</option>
+                        <option value="albañil">Albañil</option>
+                        <option value="limpieza">Servicio de limpieza</option>
+                    </select>
+                </div>
+                <div class="oferta">
+                    <label for="oferta">oferta</label>   
+                    <label><input type="radio" name="oferta" value="si"> SI</label>
+                    <label><input type="radio" name="oferta" value="no"> NO</label>
+                </div>
+                <div class="fecha">
+                    <label for="fecha">fecha de terminacion de oferta</label>
+                    <input class="fecha" type="date" id="fecha" name="fecha">
+                </div>
+                <div>
+                    <button class="btn" type="submit">publicar</button>
+                    <button class="btn" type="reset">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    
+<script type="text/javascript" src="js/como_funciona.js"></script>
+</body>
+</html>

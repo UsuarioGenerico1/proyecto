@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aldo Faican Soliz">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/general.css">
+<style>
+*{/*selector universal*/
+            margin: 0;/*reseteamos el margin en 0*/
+            padding: 0;/*padding tambien */
+            font-family: "montserrat", serif;/*tipo de letra*/
+            box-sizing: border-box;/*aplicar correctamente el padding*/
+            text-decoration: none;/*linea de abajo de los enlaces*/
+            
+        }
+
+        #form{/*utilizamos este id para colorear*/
+            background-color: #d0d0d0d0;
+            border: 1px solid #2c2f35;
+            
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 3% 26%;
+            border-radius: 15px;
+
+        }
+
+        .form-group{
+            width: 100%;/*ocupa toda la pantalla*/
+            margin: 10px;
+            margin-left: 39px;
+            display: block;/*la maquetacion*/
+            align-items:center;/*centrar formulario*/
+            justify-content: center;
+            
+            
+        }
+/*-----------RADIO---------------GENERO---------*/
+       
+
+.form-group input,
+.form-group select {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+   
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/*777777777777777777777777777777777777777777777777777777*/
+
+
+#radio-genero label{
+padding: 0px;
+
+}
+
+
+#radio-genero input[type="radio"] {
+  display: none; /* Ocultamos el input por defecto */
+}
+
+#radio-genero label::before {/*Creamos un pseudoelemento antes del contenido del label para representar el círculo del radio button.*/
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+#radio-genero input[type="radio"]:checked + label::before {
+  background-color:  #4CAF50;
+  border-color:  #5f8d61;
+}
+
+
+/*---------CHECK-------------BOX----------*/
+
+#jornadasid  label {
+  padding: 0px;
+}
+
+#jornadasid  input[type="checkbox"] {
+  display: none; /* Ocultamos el input por defecto */
+}
+
+#jornadasid label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 3px; /* le damos redondeo al check*/
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+#jornadasid  input[type="checkbox"]:checked + label::before {
+  background-color: #4CAF50;
+  border-color: #5f8d61;
+  /* Agregamos un pseudoelemento */
+  content: "\2714"; 
+  color: white;
+  text-align: center;
+}
+
+/*----------------------------------------fin--------------------------------*/
+        .form-group h2{/*el titulo de registro de profesion*/
+            text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+        }
+
+        .form-group label{
+            font-size: 23px;
+            margin: 13px 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        input::placeholder{
+            align-items: center;
+            justify-content: center;
+            padding: 23px;
+        } 
+
+        .form-group label[for="upload"] {/*esto es del curriculum*/
+  display: inline-block;
+  padding: 10% 16%;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.form-group input[type="file"] {
+  display: inline-block;
+}
+
+
+.submit-btn {/*boton guardar */
+    width: 50%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    margin: 20px 132px ;
+    
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+
+.warnings {/*las advertencias */
+  width: 45%;
+  text-align: center; 
+  color: rgb(245, 88, 114); 
+  padding-top: 13px;
+  border: 3px solid #45a049; 
+  background-color: #FFEEEE; 
+  margin: 3% 26%;
+  border-radius: 8px;
+}
+
+       
+       
+
+
+
+
+</style>
+    </head>
+    <body>
+        <header id="cabezera">
+            <a href="busquedas.html" style="text-decoration: none;color: white;" class="home">
+                <p>OficioYA</p>
+            </a>
+            <div id="busqueda">
+                <input type="text" placeholder="buscar....">
+                <button type="button">🔍</button>
+            </div>
+            <div id="iconos">
+                <a href="home.html">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+                </a>
+                <a href="ayuda.html">
+                    <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+                </a>            
+            </div>
+        </header>
+        <nav class="enlaces">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="registro-profesionales.html">Registro Profecional</a></li>
+              <li><a href="reembolsos.html">Reembolso</a></li>
+              <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+              <li><a href="publicacion.html">Publicar</a></li>
+          <li><a href="perfil_pro.html">ver profesional</a></li> 
+              <li><a href="ayuda.html">Ayuda</a></li> 
+            </ul>
+        </nav>
+
+
+      <!-- <form action="" id="formulario" onsubmit="return validarformulario()">--> 
+        <form action="" id="form"    >
+        <div class = "form-group">
+            <h2>Registro de Profesional </h2>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre"placeholder="ingrese nombre completo"/>
+                
+
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contrasena:  </label>
+                <input type="password" name="password" id="password" placeholder="ingrese contrasena" >
+                
+            </div>
+
+            <div class = "form-group">
+                <label for="fecha">Fecha de nacimiento:  </label>
+                <input type="date" id="fecha" name="fecha"/>
+                
+            </div>
+
+            <div class="form-group">
+                <label for="number">Numero:  </label>
+                <input type="number" name="number" id="number" placeholder="ingrese telefono" >
+                
+                
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:  </label>
+                <input type="email" name="email" id="email" placeholder="ingrese email" >
+                <small>campo vacio</small>
+            </div>
+
+            <div class = "form-group">
+            <label for="estadoc">Profesion:  </label>
+            <select name="estadoc" id="estadoc" class="estado">
+            <option value="">seleccione...</option>
+            <option value="albanil">albanil</option>
+            <option value="electricista">electricista</option>
+            <option value="plomero">plomero</option>
+            <option value="limpieza">limpieza</option>     
+            </select>
+         
+        </div>
+
+        <div class = "form-group" id="radio-genero">
+            <label for="">selecciona un genero</label>
+            
+            <input   type="radio" name="genero" id="femenino" value="femenino"/>
+            <label  for="femenino">Femenino</label>
+            <input  type="radio" name="genero" id="masculino" value="masculino"/>
+            <label  for="masculino">masculino</label>
+        
+        </div>
+        <div class = "form-group" id="jornadasid">
+            <label for="">selecciona su(s) jornada(s)</label>
+            <input type="checkbox" name="intereses" id="intereses1" value="matutino"/>
+            <label for="intereses1">matutino</label>
+            <input type="checkbox" name="intereses" id="intereses2" value="vespertino"/>
+            <label for="intereses2">vespertino</label>
+            
+        </div>
+
+        <div class="form-group">
+            <label for="">sube Curriculum</label>
+            <input type="file" accept=".doc,.docx,.pdf" id="upload">
+            <label for="upload" class="uploadlabel">Click Aqui</label>
+
+        </div>
+
+        <div>
+            <!--<input type="submit" value="guardar">
+            <input type="reset" value="cancelar">-->
+
+            <button type="submit" class="submit-btn">guardar</button>
+            <!--<button type="reset">cancelar</button>-->
+        </div>
+        
+        </form>
+        <p class="warnings" id="warnings"> </p>
+
+
+        <script>
+        const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const number = document.getElementById("number");
+const estado = document.querySelector(".estado");
+const fecha = document.getElementById("fecha"); 
+const form = document.getElementById("form");
+const parrafo = document.getElementById("warnings");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let warning = "";
+  let regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  let regexTelefono = /^\d{3}-\d{3}-\d{4}$/;
+  const estadosValidos = ['albanil', 'electricista', 'plomero', 'limpieza'];
+
+  parrafo.innerHTML = "";
+  let entrar = false;
+
+  if (nombre.value.length < 3) {
+    warning += 'El nombre no es válido<br>';
+    entrar = true;
+  }
+
+  if (!regexEmail.test(email.value)) {
+    warning += 'El email no es válido<br>';
+    entrar = true;
+  }
+//validación de contrasena 
+  if (password.value.length < 8) {
+    warning += 'La contraseña no es válida<br>';
+    entrar = true;
+  }
+
+  // Validación del número de teléfono
+  if (!regexTelefono.test(number.value)) {
+    warning += 'El número de teléfono no es válido<br>';
+    entrar = true;
+  }
+
+  // Validación del estado civil
+  if (!estadosValidos.includes(estado.value)) {
+    warning += 'Por favor, selecciona un estado civil válido<br>';
+    entrar = true;
+  }
+
+  // Validación de los checkboxes
+  const checkbox1 = document.getElementById("intereses1");
+  const checkbox2 = document.getElementById("intereses2");
+
+  if (!checkbox1.checked && !checkbox2.checked) {
+    warning += 'Debes seleccionar al menos una jornada.<br>';
+    entrar = true;
+  }
+
+  // Validación de la fecha
+  if (fecha.value === "") {
+        warning += "<br>La fecha es requerida";
+        entrar = true;
+    } else {
+        let fechaSeleccionada = new Date(fecha.value);
+        let fechaMaxima = new Date('2006-10-22');
+        let fechaActual = new Date();
+
+        if (fechaSeleccionada > fechaMaxima || fechaSeleccionada > fechaActual) {
+            warning += "<br>usted debe ser mayor de edad para poder trabajar";
+            entrar = true;
+        }
+    }
+
+    // Validación del archivo
+  const archivo = upload.files[0];
+  if (!archivo) {
+    warning += "<br>Debes seleccionar un archivo.";
+    entrar = true;
+  } else {
+    const tiposArchivosPermitidos = ['application/pdf'];
+    const maxSize = 10485760; // 10 MB en bytes
+
+    if (!tiposArchivosPermitidos.includes(archivo.type)) {
+      warning += "<br>Solo se permiten archivos PDF.";
+      entrar = true;
+    }
+
+    if (archivo.size > maxSize) {
+      warning += "<br>El archivo es demasiado grande. El límite es de 10MB.";
+      entrar = true;
+    }
+  }
+
+ 
+ 
+  if (entrar) {
+    parrafo.innerHTML = warning;
+  } else {
+    parrafo.innerHTML = "Enviado";
+    
+  }
+});
+</script>
+</body>
+</html>
+        
+
+    

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina</title>
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(images/fondo2.jpg);
+    background-position: center center ;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+    padding :80px 0;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu{
+    display: none;
+
+}
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+display: flex;
+right: 70px;
+
+}
+
+.header-txt{
+    flex-basis: 65%;
+}
+
+.header-txt h1{
+    font-size: 60px;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.header-txt span{/*palabra profesionales*/
+    color: rgb(104, 96, 135);
+}
+
+.header-txt p{
+font-size: 17px;
+color: #e0e0e0;
+margin-bottom: 45px;
+}
+
+.buscar{
+    padding: auto;
+}
+
+.buttons{
+    display: flex;
+}
+
+.btn-1, .btn-2, .btn-3 {
+    display: inline-block;
+    padding:11px 35px;
+    border: 2px solid  rgb(104, 96, 135);
+    border-radius: 25px;
+    margin-right: 26px;
+    margin-top: 25px;
+    font-size:  17px;
+    color: white;
+
+}
+.btn-1:hover{
+    background-color:  rgb(104, 96, 135);
+}
+
+.popular{
+    padding: 100px 0;
+text-align: center;
+
+}
+
+h2{/*textos*/
+    color: #333;
+    font-size: 35px;
+    margin-bottom: 45px;
+
+}
+
+
+.popular-content{
+    display:flex ;
+    justify-content: space-between;
+}
+
+
+.popular-content img{
+    width: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)/*agg las sombras*/
+
+}
+
+.popular-content img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }/*hace que la imagen cresca*/
+
+
+.product-content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+
+}
+
+
+
+.product-1{
+    background-color:  rgb(103, 104, 103);/*color del producto               */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)
+}
+
+.product-1 img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.product-txt{
+padding: 10px 10px;
+}
+
+
+h3{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price p{/*boton de mas info*/
+    font-size: 17px;
+    color: rgb(250, 250, 250);
+    text-decoration: underline;/*subrayado*/
+    
+}
+
+.btn-2{/*boton de contratar*/
+    padding:5px 25px ;
+    background-color:  rgb(104, 96, 135);
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+.contact{
+    padding: 150px 300px;
+
+}
+
+.contact-content{
+    background-color: #2a223a;
+    text-align: center;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input{
+    padding: 18px 25px;
+    background-color: #3f3456 ;
+    border: 0;
+   
+    border-radius: 25px;
+   
+    outline:none;
+    margin-right: 10px;
+    color: white;
+    font-size: 17px;
+    width: 50%;
+}
+
+/*input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 50%;
+    outline: none;
+}*/
+
+
+::placeholder{
+    color: #e0e0e0;
+    font-size: 17px;
+}
+
+.btn-3 {
+    background-color: rgb(104, 96, 135);
+    cursor: pointer;
+    margin-right: 0;
+}
+
+
+@media(max-width:991px){
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ff5a2c;
+        display: none;
+    }
+
+    .menu .navbar ul li:hover{
+        color: #1b1716;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+#menu:checked~ .navbar{
+    display: initial;
+}
+.header{
+min-height: 0vh;
+padding: 80px 30px 50px 30px;
+}
+
+.header-txt{
+text-align: center;
+flex-basis: 100%;
+}
+
+.header-txt h1{
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.butons{
+    justify-content: center;
+}
+.btn-1:last-of-type{
+    margin-right: 0;
+}
+.popular{
+    display: none;
+}
+
+.product{
+    padding: 30px;
+}
+
+.product-content{
+    grid-template-columns: repeat(1,1fr)
+    ;
+}
+
+.product-1 img{
+    width: 100%;
+}
+
+.contact{
+    padding: 30px;
+
+}
+form{
+    flex-direction: column;
+}
+
+input{
+margin: 0 0 20px 0;
+}
+
+.footer{
+    flex-direction: column;
+    text-align: center;
+}
+
+.link ul{
+    margin-top: 20px;
+}
+}
+    </style>
+</head>
+<body>
+    <header id="cabezera">
+        <a href="busquedas.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="index.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registro-profesionales.html">Registro Profecional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="publicacion.html">Publicar</a></li>
+            <li><a href="perfil_pro.html">ver profesional</a></li> 
+            <li><a href="ayuda.html">Ayuda</a></li>  
+            
+        </ul>
+    </nav>
+
+
+    
+
+    <header class="header">
+        <div class="menu container">
+            
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="images/menu.png" class="menu-icono" alt="menu">
+            </label>
+            
+    
+            </nav>
+        </div>
+    <div class="header-content container">
+        <div class="header-txt">
+            <h1>Encuentra <span>profesionales</span> <br>aqui </h1>
+            <div class="buscar">
+    <input type="text" placeholder="buscar...">
+            </div>
+                 <div class="butons">
+                    <a href="#" class="btn-1">oficio</a>
+                    <a href="#" class="btn-1">ubicacion</a>
+                    <a href="#" class="btn-1">precio</a>
+    
+                 </div>
+        </div>
+    </div>
+    </header>
+
+
+
+
+
+
+<section class="popular container">
+<h2>oficios populares</h2>
+<div class="popular-content">
+<img src="images/o1.webp" alt="albanil">
+<img src="images/o2.jfif" alt="electricista">
+<img src="images/o3.jpg" alt="limpieza">
+<img src="images/o4.jpg" alt="plomero">
+
+</div>
+</section>
+
+<main class="product container">
+    <h2>profesionales que te podrian gustar</h2>
+    <div class="product-content">
+
+
+<div class="product-1">
+    <img src="images/n1.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Juan Pérez, Albañil</h3>
+    <p > con 10 años de experiencia. Especializado en construcción de muros de 
+        carga y acabados en yeso. Dominio de herramientas manuales y eléctricas. 
+        Capaz de leer planos y realizar trabajos de albañilería en general.
+    </p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+
+<div class="product-1">
+    <img src="images/n2.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Ana López, Electricista</h3>
+    <p>titulada. Amplios conocimientos en instalaciones eléctricas residenciales e 
+        industriales. Experiencia en detección y reparación de cortocircuitos. 
+        Manejo de normativas de seguridad eléctrica. </p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n3.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Pedro García, Personal de Limpieza</h3>
+    <p>con gran capacidad de organización y atención al detalle. Experiencia en limpieza
+         de oficinas, edificios y espacios comunes. Dominio de técnicas de limpieza profunda
+          y desinfección.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n4.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>María Sánchez, Plomera</h3>
+    <p>  con 5 años de experiencia en reparaciones domiciliarias. Especializada en desatascos,
+         sustitución de tuberías y reparación de fugas. Conocimiento de diferentes tipos de 
+         materiales y sistemas de fontanería.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n5.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Luis Martínez, Jardinero</h3>
+    <p>
+        apasionado por las plantas. Diseño y mantenimiento de jardines. Experiencia en poda,
+         siembra y cuidado de césped. Conocimiento de especies vegetales y técnicas de riego.
+    </p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n6.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Sofía Hernández, Soldadora</h3>
+    <p>certificada. Experiencia en soldadura MIG, TIG y electrodo. Capacidad para trabajar con
+         diferentes tipos de metales y realizar uniones precisas.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n7.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Carlos Ramírez, Albañil </h3>
+    <p>con formación en construcción sostenible. Experiencia en la construcción de muros de carga, 
+        tabiques y revoques. Conocimiento de materiales ecológicos y técnicas de construcción 
+        respetuosas con el medio ambiente.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n8.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>Laura González, Electricista</h3>
+    <p> con conocimientos en domótica. Instalación y configuración de sistemas inteligentes para el hogar. 
+        Experiencia en la instalación de placas solares y sistemas de calefacción eléctrica.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+<div class="product-1">
+    <img src="images/n9.jfif" alt="">
+    <div class="product-txt"></div>
+    <h3>David Fernández, Personal de Limpieza</h3>
+    <p>con experiencia en limpieza industrial. Manejo de maquinaria de limpieza profesional. Conocimiento de protocolos 
+        de limpieza y desinfección en entornos sanitarios.</p>
+    <div class="price">
+<p>mas info</p>
+<a href="#" class="btn-2">contratar</a>
+    </div>
+</div>
+
+    </div>
+
+</main>
+
+<section class="contact container">
+    <div class="contact-content">
+        <h3>dejanos una resena </h3>
+        <form >
+            <input type="email" placeholder=" escribenos!!">
+            <input type="submit" class="btn-3" value="enviar">
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+</html>
