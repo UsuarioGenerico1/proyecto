@@ -35,17 +35,17 @@ function ventanaModal(encabezado, mensaje) {
 }
 
 
-let currentIndex = 0;
-const images = document.querySelectorAll('.imgBanner');
-const totalImages = images.length;
+let index = 0;
+let imagenes = document.querySelectorAll('.imgBanner');
+let totalImagenes = imagenes.length;
 
-function changeSlide() {
-    currentIndex++;
-    if (currentIndex >= totalImages) {
-        currentIndex = 0; 
+function cambiarSlide() {
+    index++;
+    if (index >= totalImagenes) {
+        index = 0; 
     }
-    const newTransformValue = -currentIndex * 100;
-    document.querySelector('.slider').style.transform = `translateX(${newTransformValue}%)`;
+    let valor = -index * 100;
+    document.querySelector('.slider').style.transform = `translateX(${valor}%)`;
 }
 // Cambiar la imagen cada 3 segundos
-setInterval(changeSlide, 3000);
+setInterval(cambiarSlide, 3000);

@@ -5,7 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Edison Veloz Moran">
     <title>Inicio de Sesión - OficioYA</title>
-    <link rel="stylesheet" href="css/general2.css">
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        /* Estilos para los contenedores de login y registro */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 140px);
+            padding: 20px;
+        }
+
+        .auth-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .auth-box h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        /* Estilos para formularios */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+            outline: none;
+        }
+
+        .form-group select {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        /* Estilos para checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        /* Estilos para botones */
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilos para mensajes de error */
+        .error-message {
+            color: #ff0000;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* Estilos para links de alternancia login/registro */
+        .auth-link {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .auth-link a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .auth-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .auth-box {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            #busqueda input {
+                width: 100%;
+            }
+
+            .enlaces ul {
+                flex-direction: column;
+            }
+
+            .enlaces ul li {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header id="cabezera">

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Edison Wladimir Veloz Moran">
+    <title>Pagos de Contratación - OficioYa</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+<body>
+
+    <header id="cabezera">
+        <a href="busquedas.html" style="text-decoration: none;color: white;" class="home">
+            <p>OficioYA</p>
+        </a>
+        
+        <div id="busqueda">
+            <input type="text" placeholder="buscar....">
+            <button type="button">🔍</button>
+        </div>
+        <div id="iconos">
+            <a href="login.html">
+                <img class="icon" src="https://cdn-icons-png.flaticon.com/512/11789/11789135.png" width="40" alt="usuario">
+            </a>
+            <a href="ayuda.html">
+                <img class="icon" src="https://cdn-icons-png.freepik.com/512/786/786024.png" width="40" alt="ayuda">
+            </a>            
+        </div>
+    </header>
+    <nav class="enlaces">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="registro-profesionales.html">Registro Profesional</a></li>
+            <li><a href="reembolsos.html">Reembolso</a></li>
+            <li><a href="como_funciona.html">¿Como Funciona?</a></li>
+            <li><a href="publicacion.html">Publicar</a></li>
+            <li><a href="perfil_pro.html">ver profesional</a></li> 
+            <li><a href="ayuda.html">Ayuda</a></li>  
+        </ul>
+    </nav>
+
+<section id="payments-container">
+    <section id="payments">
+        <h2>Detalles de Pago</h2>
+        <p><strong>Nombre del Contratista:</strong> Edison Wladimir Veloz Moran</p>
+        <p><strong>Cargo:</strong> Desarrollador Web</p>
+        <p><strong>Precio del Servicio:</strong> $500</p>
+        <p><strong>Descripción del Servicio:</strong> Desarrollo de una página web personalizada con funcionalidades específicas.</p>
+    </section>
+
+    <section id="payment-methods">
+        <h3>Métodos de Pago</h3>
+        <ul>
+            <li>Tarjeta de Crédito</li>
+            <li>PayPal</li>
+            <li>Transferencia Bancaria</li>
+            <li>Stripe</li>
+        </ul>
+    </section>
+
+    <section id="payment-form">
+        <h3>Formulario de Pago</h3>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="amount">Monto a Pagar:</label>
+            <input type="number" id="amount" name="amount" value="500" readonly>
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+                <option value="stripe">Stripe</option>
+            </select>
+            <button type="submit">Realizar Pago</button>
+        </form>
+    </section>
+
+    <section id="progress">
+        <h3>Progreso del Pago</h3>
+        <progress value="0" max="100" id="payment-progress">0%</progress>
+        <p>Progreso: <span id="progress-text">0%</span></p>
+    </section>
+
+    <section id="payment-status">
+        <h3>Estado del Pago</h3>
+        <p>Estado Actual:</p>
+        <meter value="0.5" min="0" max="1">50%</meter>
+        <p>Este medidor indica que el 50% del proceso de pago ha sido completado.</p>
+    </section>
+</section>
+
+<footer>
+    <p>OficioYa - Tarea.</p>
+    <p>&copy; 2024 Edison Wladimir Veloz Moran</p>
+</footer>
+<style>
+    /* Estilos específicos para la página de pagos */
+    #payments-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px; 
+        margin: 0 auto; 
+        padding: 20px;
+    }
+
+    #payments, #payment-methods, #payment-form, #progress, #payment-status {
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+        margin-bottom: 20px; /* Espacio entre secciones */
+    }
+
+    h2, h3 {
+        color: #333; /* Color de los encabezados */
+    }
+
+    progress {
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+    }
+
+    meter {
+        width: 100%;
+        height: 20px;
+        margin-top: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px;
+        font-size: 1em;
+        cursor: pointer;
+        background-color: #5cb85c; /* Color de fondo verde */
+        color: white; /* Color del texto */
+        border: none; /* Sin borde */
+        border-radius: 5px; /* Bordes redondeados */
+        transition: background-color 0.3s; /* Transición suave */
+    }
+
+    button[type="submit"]:hover {
+        background-color: #4cae4c; /* Color de fondo al pasar el mouse */
+    }
+
+    /* Estilos para el formulario */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"], select {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+</style>
+</body>
+</html>
